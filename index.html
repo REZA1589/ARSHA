@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARSHA | قفل کتابی، پشت بسته، استوانه و دیسک موتور</title>
+    <meta name="description" content="قفل کتابی، قفل پشت بسته، قفل استوانه و قفل دیسک موتور ARSHA با سیلندر سولکس و دوشیار. امنیت واقعی برای خانه، مغازه و موتور.">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FFC107;
+            --dark: #000;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Vazirmatn', sans-serif; background:#000; color:#fff; line-height:1.8; }
+
+        header {
+            position:fixed; top:0; left:0; width:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(15px);
+            z-index:1000; padding:14px 5%; display:flex; justify-content:space-between; align-items:center;
+            border-bottom:3px solid var(--primary);
+        }
+        .logo-img { height:64px; }
+
+        .hero {
+            height:100vh;
+            background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)), url('hero.jpg') center/cover no-repeat fixed;
+            display:flex; align-items:center; justify-content:center; text-align:center;
+        }
+        .hero h1 { font-size:46px; font-family:'Orbitron', sans-serif; color:var(--primary); text-shadow:0 0 25px rgba(255,193,7,0.6); }
+        .hero p { font-size:20px; max-width:850px; margin:22px auto; }
+        .btn {
+            background:var(--primary); color:#000; padding:15px 50px; border-radius:50px; font-size:18px; font-weight:900;
+            border:none; cursor:pointer; margin-top:25px; transition:0.3s;
+        }
+        .btn:hover { transform:scale(1.06); box-shadow:0 0 30px rgba(255,193,7,0.5); }
+
+        .section { padding:100px 6%; }
+        h2 { font-size:38px; text-align:center; margin-bottom:60px; color:var(--primary); font-family:'Orbitron', sans-serif; }
+
+        .products-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:35px; }
+        .product-card { background:#111; border-radius:20px; overflow:hidden; border:2px solid #333; transition:0.4s; }
+        .product-card:hover { border-color:var(--primary); transform:translateY(-8px); }
+        .product-card img { width:100%; height:260px; object-fit:cover; }
+        .product-info { padding:28px 22px; text-align:center; }
+        .product-info h3 { font-size:21px; margin-bottom:12px; }
+        .product-info p { font-size:15.5px; opacity:0.92; }
+
+        .cylinder-section { background:#0a0a0a; padding:100px 6%; text-align:center; }
+        .cylinder-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:40px; margin-top:40px; }
+        .cylinder-card { background:#111; padding:35px 25px; border-radius:18px; border:2px solid #333; }
+        .cylinder-card img { width:100%; max-width:240px; border-radius:12px; border:3px solid var(--primary); margin-bottom:20px; }
+        .cylinder-card h3 { color:var(--primary); font-size:21px; margin-bottom:10px; }
+
+        .features { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:30px; }
+        .feature-box { background:#111; padding:35px 25px; border-radius:18px; text-align:center; border:2px solid #333; }
+        .feature-box i { font-size:42px; color:var(--primary); margin-bottom:18px; }
+        .feature-box h3 { font-size:19px; margin-bottom:10px; }
+
+        .cta-box {
+            text-align:center; padding:90px 6%;
+            background: linear-gradient(to bottom, #000, #111);
+        }
+        .cta-box h2 { font-size:42px; margin-bottom:20px; }
+        .cta-box p { font-size:19px; max-width:800px; margin:0 auto 30px; }
+
+        .social-buttons {
+            position:fixed; bottom:18px; left:50%; transform:translateX(-50%);
+            display:flex; gap:14px; z-index:9999;
+        }
+        .social-buttons a {
+            width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-size:24px; color:#fff; box-shadow:0 6px 18px rgba(0,0,0,0.4); transition:0.3s;
+        }
+        .social-buttons a:hover { transform:translateY(-7px); }
+        .social-buttons a:nth-child(1) { background:#25D366; }
+        .social-buttons a:nth-child(2) { background:#229ED9; }
+        .social-buttons a:nth-child(3) { background:linear-gradient(45deg,#F56040,#C32AA3,#4f5bd5); }
+
+        @media (max-width:768px) {
+            .hero h1 { font-size:32px; }
+            .hero p { font-size:16px; }
+            h2 { font-size:30px; }
+            .btn { padding:13px 38px; font-size:16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="ARSHA" class="logo-img">
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>امنیت واقعی، بدون مصالحه</h1>
+        <p>قفل کتابی، پشت بسته، استوانه و دیسک موتور ARSHA<br>ساخته شده برای کسانی که امنیت را جدی می‌گیرند</p>
+        <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">مشاهده محصولات</button>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="section">
+    <h2>محصولات ARSHA</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="product-ketabi.jpg" alt="قفل کتابی">
+            <div class="product-info">
+                <h3>قفل کتابی ARSHA</h3>
+                <p>بدنه فولادی سخت‌کاری‌شده با مقاومت بالا در برابر برش و ضربه. انتخاب مطمئن برای درهای فلزی و مکان‌های پرخطر.</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="product-poshtbaste.jpg" alt="قفل پشت بسته">
+            <div class="product-info">
+                <h3>قفل پشت بسته ARSHA</h3>
+                <p>طراحی یکپارچه و غیرقابل دستکاری از پشت. امنیت بیشتر برای درهای ورودی، مغازه و انباری.</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="product-ostovane.jpg" alt="قفل استوانه">
+            <div class="product-info">
+                <h3>قفل استوانه ARSHA</h3>
+                <p>ساختار محکم با عملکرد روان. قابل تجهیز به سیلندر سولکس یا دوشیار برای افزایش سطح امنیت.</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="product-disk.jpg" alt="قفل دیسک موتور">
+            <div class="product-info">
+                <h3>قفل دیسک موتور ARSHA</h3>
+                <p>طراحی ضدبرش و سبک. مناسب برای موتورسیکلت و دوچرخه برقی. امنیت قابل اعتماد در حرکت.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cylinders -->
+<section class="cylinder-section">
+    <h2>سیلندرهای ARSHA</h2>
+    <div class="cylinder-grid">
+        <div class="cylinder-card">
+            <img src="cylinder-solex.jpg" alt="سیلندر سولکس">
+            <h3>سیلندر سولکس</h3>
+            <p>ضد اسید، ضد دریل و ضد شاه‌کلید. برای کسانی که به امنیت واقعی نیاز دارند.</p>
+        </div>
+        <div class="cylinder-card">
+            <img src="cylinder-doshayar.jpg" alt="سیلندر دوشیار">
+            <h3>سیلندر دوشیار</h3>
+            <p>طراحی دقیق با دو شیار و مقاومت بالا در برابر دستکاری و کپی‌برداری غیرمجاز.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why ARSHA -->
+<section class="section">
+    <h2>چرا ARSHA؟</h2>
+    <div class="features">
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>مقاومت واقعی</h3>
+            <p>ساخته شده از فولاد سخت‌کاری‌شده برای تحمل فشار و برش</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-lock"></i>
+            <h3>سیلندرهای امن</h3>
+            <p>مجهز به سیلندر سولکس و دوشیار ضد دستکاری</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-cogs"></i>
+            <h3>طراحی صنعتی</h3>
+            <p>طراحی شده برای استفاده طولانی‌مدت در شرایط سخت</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-thumbs-up"></i>
+            <h3>اعتماد مشتریان</h3>
+            <p>انتخاب کسانی که امنیت را جدی می‌گیرند</p>
+        </div>
+    </div>
+</section>
+
+<!-- Strong CTA -->
+<section class="cta-box">
+    <h2>امنیت خانه، مغازه و موتور شما ارزشش را دارد</h2>
+    <p>قفل‌های ARSHA فقط یک محصول نیستند. آن‌ها یک لایه محافظ واقعی برای دارایی‌های شما هستند.</p>
+    <button class="btn" onclick="window.open('https://wa.me/989123793037', '_blank')">مشاوره و سفارش از واتساپ</button>
+</section>
+
+<!-- Social -->
+<div class="social-buttons">
+    <a href="https://wa.me/989197906040" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/gssshop" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://www.instagram.com/g.s.s_lock" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
+</body>
+</html>
